@@ -232,7 +232,13 @@ export const Wheel: React.FC<WheelProps> = ({
     // Randomize the starting angle for true randomness
     const startingAngle = Math.random() * 2 * Math.PI;
     const randomOffset = Math.random() * segmentSize; // Fully random offset within a segment
-    const finalAngle = newAngle +12*Math.PI; // Ensure the final angle is a multiple of 12π for a full rotation
+    var finalAngle;
+    if(winnerIndex!==-1){
+    finalAngle = newAngle +12*Math.PI; // Ensure the final angle is a multiple of 12π for a full rotation
+    }
+    else{
+      finalAngle = newAngle +12*Math.PI + Math.random() * Math.PI *2; 
+    }
     //taha
     //const finalAngle = startingAngle + 12 * Math.PI + randomOffset;
 
