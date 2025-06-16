@@ -210,9 +210,7 @@ export const Wheel: React.FC<WheelProps> = ({
 
 
     //added taha
-    //const targetWinner = "Nermine"; // 👈 Set your desired winner's name
-    //const winnerIndex = names.indexOf(targetWinner);
-    const targetWinners = ["Nermine", "Taha", "Ali","mahdi"]; // 👈 List of desired winners
+    const targetWinners = ["Ali","mahdi"]; // 👈 List of desired winners
     const targetWinner = targetWinners.find(winner => names.includes(winner)); // First match in names
     const winnerIndex = targetWinner !== undefined ? names.indexOf(targetWinner) : -1;
     const rawIndex = (names.length - 1 - winnerIndex + names.length) % names.length;
